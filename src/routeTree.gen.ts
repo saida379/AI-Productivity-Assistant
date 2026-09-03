@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AcademyRouteImport } from './routes/academy'
+import { Route as AlertsRouteImport } from './routes/alerts'
+import { Route as ApplicationAssistantRouteImport } from './routes/application-assistant'
+import { Route as CoachRouteImport } from './routes/coach'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as EmployersRouteImport } from './routes/employers'
+import { Route as InterviewCoachRouteImport } from './routes/interview-coach'
+import { Route as OpportunitiesRouteImport } from './routes/opportunities'
+import { Route as TrustSafetyRouteImport } from './routes/trust-safety'
+import { Route as WilConnectRouteImport } from './routes/wil-connect'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyRoute = AcademyRouteImport.update({
+  id: '/academy',
+  path: '/academy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlertsRoute = AlertsRouteImport.update({
+  id: '/alerts',
+  path: '/alerts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApplicationAssistantRoute = ApplicationAssistantRouteImport.update({
+  id: '/application-assistant',
+  path: '/application-assistant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoachRoute = CoachRouteImport.update({
+  id: '/coach',
+  path: '/coach',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployersRoute = EmployersRouteImport.update({
+  id: '/employers',
+  path: '/employers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InterviewCoachRoute = InterviewCoachRouteImport.update({
+  id: '/interview-coach',
+  path: '/interview-coach',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OpportunitiesRoute = OpportunitiesRouteImport.update({
+  id: '/opportunities',
+  path: '/opportunities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrustSafetyRoute = TrustSafetyRouteImport.update({
+  id: '/trust-safety',
+  path: '/trust-safety',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WilConnectRoute = WilConnectRouteImport.update({
+  id: '/wil-connect',
+  path: '/wil-connect',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
+  '/alerts': typeof AlertsRoute
+  '/application-assistant': typeof ApplicationAssistantRoute
+  '/coach': typeof CoachRoute
+  '/dashboard': typeof DashboardRoute
+  '/employers': typeof EmployersRoute
+  '/interview-coach': typeof InterviewCoachRoute
+  '/opportunities': typeof OpportunitiesRoute
+  '/trust-safety': typeof TrustSafetyRoute
+  '/wil-connect': typeof WilConnectRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
+  '/alerts': typeof AlertsRoute
+  '/application-assistant': typeof ApplicationAssistantRoute
+  '/coach': typeof CoachRoute
+  '/dashboard': typeof DashboardRoute
+  '/employers': typeof EmployersRoute
+  '/interview-coach': typeof InterviewCoachRoute
+  '/opportunities': typeof OpportunitiesRoute
+  '/trust-safety': typeof TrustSafetyRoute
+  '/wil-connect': typeof WilConnectRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
+  '/alerts': typeof AlertsRoute
+  '/application-assistant': typeof ApplicationAssistantRoute
+  '/coach': typeof CoachRoute
+  '/dashboard': typeof DashboardRoute
+  '/employers': typeof EmployersRoute
+  '/interview-coach': typeof InterviewCoachRoute
+  '/opportunities': typeof OpportunitiesRoute
+  '/trust-safety': typeof TrustSafetyRoute
+  '/wil-connect': typeof WilConnectRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/alerts'
+    | '/application-assistant'
+    | '/coach'
+    | '/dashboard'
+    | '/employers'
+    | '/interview-coach'
+    | '/opportunities'
+    | '/trust-safety'
+    | '/wil-connect'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/alerts'
+    | '/application-assistant'
+    | '/coach'
+    | '/dashboard'
+    | '/employers'
+    | '/interview-coach'
+    | '/opportunities'
+    | '/trust-safety'
+    | '/wil-connect'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/alerts'
+    | '/application-assistant'
+    | '/coach'
+    | '/dashboard'
+    | '/employers'
+    | '/interview-coach'
+    | '/opportunities'
+    | '/trust-safety'
+    | '/wil-connect'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AcademyRoute: typeof AcademyRoute
+  AlertsRoute: typeof AlertsRoute
+  ApplicationAssistantRoute: typeof ApplicationAssistantRoute
+  CoachRoute: typeof CoachRoute
+  DashboardRoute: typeof DashboardRoute
+  EmployersRoute: typeof EmployersRoute
+  InterviewCoachRoute: typeof InterviewCoachRoute
+  OpportunitiesRoute: typeof OpportunitiesRoute
+  TrustSafetyRoute: typeof TrustSafetyRoute
+  WilConnectRoute: typeof WilConnectRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy': {
+      id: '/academy'
+      path: '/academy'
+      fullPath: '/academy'
+      preLoaderRoute: typeof AcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/alerts': {
+      id: '/alerts'
+      path: '/alerts'
+      fullPath: '/alerts'
+      preLoaderRoute: typeof AlertsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/application-assistant': {
+      id: '/application-assistant'
+      path: '/application-assistant'
+      fullPath: '/application-assistant'
+      preLoaderRoute: typeof ApplicationAssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coach': {
+      id: '/coach'
+      path: '/coach'
+      fullPath: '/coach'
+      preLoaderRoute: typeof CoachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/employers': {
+      id: '/employers'
+      path: '/employers'
+      fullPath: '/employers'
+      preLoaderRoute: typeof EmployersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/interview-coach': {
+      id: '/interview-coach'
+      path: '/interview-coach'
+      fullPath: '/interview-coach'
+      preLoaderRoute: typeof InterviewCoachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/opportunities': {
+      id: '/opportunities'
+      path: '/opportunities'
+      fullPath: '/opportunities'
+      preLoaderRoute: typeof OpportunitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trust-safety': {
+      id: '/trust-safety'
+      path: '/trust-safety'
+      fullPath: '/trust-safety'
+      preLoaderRoute: typeof TrustSafetyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wil-connect': {
+      id: '/wil-connect'
+      path: '/wil-connect'
+      fullPath: '/wil-connect'
+      preLoaderRoute: typeof WilConnectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AcademyRoute: AcademyRoute,
+  AlertsRoute: AlertsRoute,
+  ApplicationAssistantRoute: ApplicationAssistantRoute,
+  CoachRoute: CoachRoute,
+  DashboardRoute: DashboardRoute,
+  EmployersRoute: EmployersRoute,
+  InterviewCoachRoute: InterviewCoachRoute,
+  OpportunitiesRoute: OpportunitiesRoute,
+  TrustSafetyRoute: TrustSafetyRoute,
+  WilConnectRoute: WilConnectRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
